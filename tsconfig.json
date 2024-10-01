@@ -1,0 +1,36 @@
+//tsc -b
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "moduleDetection": "force",
+    "target": "es2022",
+    "lib": ["es2023", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true, //avoid some problems with old libraries
+    "allowImportingTsExtensions": true, //Allows importing TypeScript files
+    "resolveJsonModule": true, //Allows importing JSON files as modules
+    "isolatedModules": true, //useful for compatibility with certain bundlers
+    "skipLibCheck": true,
+    "allowJs": true,
+    "noUncheckedIndexedAccess": true, //warn that array index could be undefined
+    "noEmit": true,
+    "useDefineForClassFields": true,
+    "removeComments": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowUnreachableCode": false,
+    "noPropertyAccessFromIndexSignature": true,
+    "baseUrl": ".",
+    "outDir": "./dist/client",
+    "rootDir": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules"]
+}
